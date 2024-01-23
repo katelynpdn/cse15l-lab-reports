@@ -1,11 +1,11 @@
 ## Lab Report 1
 1) `cd` with no arguments
 ```
-[user@sahara ~]$ cd
-[user@sahara ~]$
+[user@sahara ~/lecture1/messages]$ cd
+[user@sahara ~]$ 
 ```
-The working directory is `/home`.
-`cd changes directory, but since I provided no arguments, nothing happened and I remained in the same directory.
+The working directory is `/home/lecture1/messages`.
+`cd` changes directory, and when I provide no arguments, it changes to the home directory, `/home` by default.
 This output is expected and not an error.
 
 2) `cd` with path to directory
