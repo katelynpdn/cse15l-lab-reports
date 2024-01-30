@@ -39,9 +39,10 @@ class ChatServer {
 }
 ```
 First usage of /add-message:
-
+![Adding first message](1add-message.png)
 Second usage of /add-message:
-
+![Adding second message](2add-message.png)
 #Part 2
 
 #Part 3
+![Logging in without password](lab2_part3.png)
