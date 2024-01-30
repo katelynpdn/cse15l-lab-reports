@@ -81,7 +81,6 @@ Absolute path to private key: /Users/katelynnguyen/.ssh/id_rsa
 ![Private key cat](1privatekey_lab2.png)
 
 Absolute path to public key: /home/linux/ieng6/oce/2n/kan028/.ssh/id_rsa.pub
-![Public key 2](2publickey_lab2.png)
 ![Public key](publickey_lab2.png)
 
 Logging in without password:
