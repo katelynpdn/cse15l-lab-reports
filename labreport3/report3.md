@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.*;
 ```
-/
+
 A class to implement the StringChecker interface- it returns true if the string starts with the character 's'
 ```
 class StringChecker2 implements StringChecker {
@@ -21,7 +21,7 @@ class StringChecker2 implements StringChecker {
     }
 }
 ```
-/
+
 My JUnit Test:
 ```
 public class ListTests {
@@ -39,6 +39,7 @@ public class ListTests {
     }
 ```
 The input is an ArrayList containing "string", "ey", and "s2", and the expected result is an ArrayList containing "string" and "s2" which both start with 's'.
+
 ### Input that doesn't induce a failure:
 I added this JUnit Test to my ListTests class:
 ```
@@ -54,7 +55,15 @@ I added this JUnit Test to my ListTests class:
     }
 ```
 This test tests an ArrayList containing "string" and "ey", and since only the first string starts with 's', the expected result is an ArrayList only containing "string."/
-### Symptom:
+### Symptom
+Running JUnit with testFilter and testFilter2 (along with a testMerge function that is related to another function)
+![Running JUnit](junit_listTests)
+The result is that testFilter failed while testFilter2 succeeded.
+
+Additional screenshots:
+Running the tests through a VSCode extension:
+![testfilter](failure_testfilter.png)
+![testfilter2](success_testfilter2)
 ### Bug, Before-change
 ```
   static List<String> filter(List<String> list, StringChecker sc) {
