@@ -98,25 +98,31 @@ My two examples were calling `less -N` on a file, and combining `less -N` with `
 ![Two commands](less1-3.png)
 a.
 ![less -N](less1-1.png)
+Adding in `-N` after less lists the line numbers of each line. This is useful since we can see how many total lines there are and where we are in the file.
 b.
 ![less -N and -p](less1-2.png)
+Once again, having the line numbers is useful so we can see where we are looking in the file. It is especially helpful when also using `-p`, so that we know what line we are on when looking for a specific word.
 
 3. Viewing multiple files
 Source: [Multiple files Link](https://www.thegeekstuff.com/2010/02/unix-less-command-10-tips-for-effective-navigation/)
 a. 
-Working directory: `/Users/katelynnguyen/docsearch/technical/biomed` and using less on two files in the current directory. I used :n and :p to go back and forth between the files.
+Working directory: `/Users/katelynnguyen/docsearch/technical/biomed` and using less on two files in the current directory. I used `:n` and `:p` to go back and forth between the files.
 ![Viewing 2 files in current directory](less2-1.png)
 ![Viewing 2 files in current directory](less2-2.png)
+I can also use less to look at multiple files. In this case, I provided two files in biomed, the current directory, as command line arguments. I was able to switch between the two files using `:n` and `:p` which is useful if I want to compare two files side by side.
 b.
 Working directory: `/Users/katelynnguyen/docsearch/technical`. Using less on two files in the 911report subdirectory.
 ![Viewing 2 files in a subdirectory](less2-4.png)
 ![Viewing 2 files in a subdirectory](less2-3.png)
+In this case, I provided two files in 911report, the subdirectory in technical, as command line arguments. I was oncee again able to switch between the two files using `:n` and `:p`, and it was useful to know that I can also provide different paths to look at files.
 
-4. Searching for a pattern/sequence of characters
+5. Searching for a pattern/sequence of characters
 Source: [Search resource link](https://ioflood.com/blog/less-linux-command/#Advanced_Usage_of_the_8216less8217_Linux_Command)
 a. Typing in /word
 ![/place](less3-1.png)
 ![/place](less3-2.png)
+I used less then typed in `/place` to search for the word 'place' in the file. It highlighted all of its occurrences, which is a helpful tool similar to the Command F shortcut to find a word or phrase.
 b. Using -p pattern
 ![-p](less3-3.png)
 ![-p](less3-4.png)
+This time, I used less with `-p place` to search for the word 'place' in the file. It highlighted all of its occurrences and brought me to them, and it is helpful to be able to search for a word in the same line that I called `less`.
