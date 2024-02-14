@@ -57,13 +57,13 @@ I added this JUnit Test to my ListTests class:
 This test tests an ArrayList containing "string" and "ey", and since only the first string starts with 's', the expected result is an ArrayList only containing "string."/
 ### Symptom
 Running JUnit with testFilter and testFilter2 (along with a testMerge function that is related to another function)
-![Running JUnit](junit_listTests)
+![Running JUnit](junit_listTests.png)
 The result is that testFilter failed while testFilter2 succeeded.
 
 Additional screenshots:
 Running the tests through a VSCode extension:
 ![testfilter](failure_testfilter.png)
-![testfilter2](success_testfilter2)
+![testfilter2](success_testfilter2.png)
 ### Bug, Before-change
 ```
   static List<String> filter(List<String> list, StringChecker sc) {
@@ -88,4 +88,35 @@ Running the tests through a VSCode extension:
     return result;
   }
 ```
-The fix was changing `result.add(0, s)` to `result.add(s)`. The bug was that it was prepending the valid strings to a new array, when it should be adding them to the end in order to preserve the order. I changed it so that it adds the valid strings to the end of the new array./
+The fix was changing `result.add(0, s)` to `result.add(s)`. The bug was that it was prepending the valid strings to a new array, when it should be adding them to the end in order to preserve the order. I changed it so that it adds the valid strings to the end of the new array.
+
+## Part 2:
+-less command
+1. Using -N
+Source: Calling `man less` in the Terminal. [manual on less](https://man.archlinux.org/man/less.1#D)
+My two examples were calling `less -N` on a file, and combining `less -N` with `-p pattern`.
+![Two commands](less1-3.png)
+a.
+![less -N](less1-1.png)
+b.
+![less -N and -p](less1-2.png)
+
+3. Viewing multiple files
+Source: [Multiple files Link](https://www.thegeekstuff.com/2010/02/unix-less-command-10-tips-for-effective-navigation/)
+a. 
+Working directory: `/Users/katelynnguyen/docsearch/technical/biomed` and using less on two files in the current directory. I used :n and :p to go back and forth between the files.
+![Viewing 2 files in current directory](less2-1.png)
+![Viewing 2 files in current directory](less2-2.png)
+b.
+Working directory: `/Users/katelynnguyen/docsearch/technical`. Using less on two files in the 911report subdirectory.
+![Viewing 2 files in a subdirectory](less2-4.png)
+![Viewing 2 files in a subdirectory](less2-3.png)
+
+4. Searching for a pattern/sequence of characters
+Source: [Search resource link](https://ioflood.com/blog/less-linux-command/#Advanced_Usage_of_the_8216less8217_Linux_Command)
+a. Typing in /word
+![/place](less3-1.png)
+![/place](less3-2.png)
+b. Using -p pattern
+![-p](less3-3.png)
+![-p](less3-4.png)
