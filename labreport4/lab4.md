@@ -6,16 +6,18 @@ I coped the SSH url in my Github fork, then I typed `git clone ` in the terminal
 ### Run JUnit Tests
 ![Run JUnit Tests](lab4_img2.png)
 
-I typed `cd lab7` and `<Enter` to change to the directory. I typed `javac -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:.` then I typed in `L` and pressed `<Tab>` to fill in `ListExamples` then I typed in `T` and `<Tab>`to fill in `ListExamplesTests`, then I typed `.j` and `<Tab>` to fill in `ListExamplesTests.java`. After `<Enter` I typed `java -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore ` then the same process as before to fill in `ListExamplesTests`.
+I typed `cd lab7` and `<Enter>` to change to the directory. I typed `javac -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:.` then I typed in `L` and pressed `<Tab>` to fill in `ListExamples` then I typed in `T` and `<Tab>`to fill in `ListExamplesTests`, then I typed `.j` and `<Tab>` to fill in `ListExamplesTests.java`. After `<Enter>` I typed `java -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore ` then the same process as before to fill in `ListExamplesTests`. I pressed `<Enter>` to run the tests.
 
 ### Editing File with Vim
 ![Run vim](lab4_img3.png)
 
-I typed in `vim ` then typed `L` and pressed `<Tab>` to fill in `ListExamples` then I typed in `.j` and `<Tab>` to fill in `ListExamples.java`. I pressed `<Enter`.
+I typed in `vim ` then typed `L` and pressed `<Tab>` to fill in `ListExamples` then I typed in `.j` and `<Tab>` to fill in `ListExamples.java`. I pressed `<Enter>` and this pulled up Vim.
 
 ![Editing in vim](lab4_img4.png)
 
-Keypresses: `43j e r2 :wq <Enter>`
+Keypresses: `43j e r2 :wq <Enter>`.
+
+`43j` moves 43 lines down. `e` positions cursos af the end of the word. `r2` replaces the 1 with a 2. `:wq <Enter>` saves the file and exits.
 
 ### Run Tests Again
 ![Run Tests](lab4_img5.png)
