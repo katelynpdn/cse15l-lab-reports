@@ -4,7 +4,7 @@
    
 Hello,
 
-My bash grading script works on all the test Github repositories except one, and ends up throwing the error `grade.sh: line 44: tests): syntax error in expression (error token is ")")`.
+My bash grading script works on all the test Github repositories except one. For this test repository: `https://github.com/ucsd-cse15l-f22/list-methods-corrected`, my script ends up throwing the error `grade.sh: line 44: tests): syntax error in expression (error token is ")")`.
 Here are test Github repositories that it passes on:
 ![Passed test](lab5_img1.png)
 Here is the test Github repository that it throws an error on, and the symptom:
