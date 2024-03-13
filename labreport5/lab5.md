@@ -13,7 +13,7 @@ Here is the test Github repository that it throws an error on, and the symptom:
 Here is my grade.sh script for reference:
 ![Failed Test](lab5_img3.png)
 
-Since the symptom references line 44, I would guess that the bug may be that I am using improper parentheses syntax in this line 44 in `grade.sh`: `successes=$(( test - failures ))`. However, the syntax seems correct to me and I am confused why an error is only being thrown for one test and not the others.
+Since the symptom references line 44, I would guess that the bug may be that I am using improper parentheses syntax in line 44, this line: `grade.sh`: `successes=$(( test - failures ))`. However, the syntax seems correct to me and I am confused why an error is only being thrown for one test and not the others.
 
 2. TA Response
    
