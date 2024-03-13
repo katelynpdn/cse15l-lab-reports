@@ -1,7 +1,7 @@
 ### Clone Git Fork using SSH URL
-![git clone](lab4_img1.png)
+![git clone](lab4_img0.png)
 
-I coped the SSH url in my Github fork, then I typed `git clone ` in the terminal and pasted in `git@github.com:katelynpdn/lab7.git` after that.
+I typed `ssh kan028@ieng6.ucsd.edu` to log in. At the website of my Github fork, I copied the SSH url by using `Command C`, then I typed `git clone ` in the terminal and typed `Command V` to paste in `git@github.com:katelynpdn/lab7.git` after that.
 
 ### Run JUnit Tests
 ![Run JUnit Tests](lab4_img2.png)
