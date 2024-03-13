@@ -8,8 +8,10 @@ My bash grading script works on all the test Github repositories except one. For
 
 Here are test Github repositories that my script works on (it correctly identifies a compile error and an incorrect implementation):
 ![Passed test](lab5_img1.png)
+
 Here is the test Github repository that it throws an error on, and the symptom:
 ![Failed Test](lab5_img2.png)
+
 Here is my grade.sh script for reference:
 ![Failed Test](lab5_img3.png)
 
@@ -22,6 +24,7 @@ Hey Katelyn,
 I recommend using `echo test` and `echo failures` to see what your variable values are. It may not neccessarily be a syntax error. The `awk` command may not be splicing correctly, so maybe check if your variables are saving the correct numbers.
 
 3. Student Response
+
 Thank you, I fixed the error!
 
 I added the following lines before line 44 to check my variables:
@@ -67,7 +70,9 @@ fi
 echo "Your score is $successes / $test tests passed"
 ```
 4. Information about Setup
+
 File & directory structure:
+
 In the `grader-review-katelynpdn` directory (before running grade.sh):
 ```
 GradeServer.java
@@ -78,6 +83,7 @@ lib/
   hamcrest-core-1.3.jar
   junit-4.13.2.jar
 ```
+
 In the `grader-review-katelynpdn` directory (after running grade.sh):
 ```
 GradeServer.java
@@ -89,13 +95,12 @@ grading-area/
     TestListExamples.java
     TestListExamples.class
     junit-output.txt
-lib/
-  hamcrest-core-1.3.jar
-  junit-4.13.2.jar
 student-submission
 Server.java
 grade.sh
-lib
+lib/
+  hamcrest-core-1.3.jar
+  junit-4.13.2.jar
 ```
 
 Contents of grade.sh before fixing bug:
@@ -207,8 +212,8 @@ bash grade.sh https://github.com/ucsd-cse15l-f22/list-methods-corrected
 ```
 
 Description to fix bug:
-We are going to add an `if then else` statement so that if the output starts with "Tests", we know at least one test fails and we use our previous code. The if statement checks using `awk` whether the first word is "Tests". Else, it sets `successes` and `test` to 3 so that it will show that 3/3 tests pass. 6 lines will be added in total.
-So that the code block should look like this:
+I added an `if then else` statement so that if the output starts with "Tests", we know at least one test fails and we run our previous code to calculate `test` and `failures`. The if statement checks using `awk` whether the first word is "Tests". Else, it sets `successes` and `test` to 3 so that it will show that 3/3 tests pass. 6 lines will be added in total.
+After this fix, the code block should look like this:
 ```
 if [[ $(echo $lastline | awk '{print $1}') == "Tests" ]]
 then
